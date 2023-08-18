@@ -1,15 +1,16 @@
 import { OneTransaction } from 'components/OneTransaction/OneTransaction';
 import PropTypes from 'prop-types';
+import { TransactionHistory, TableHead, TableCell } from './Transactions.styled'
 
 export const Transactions = ({ items }) => (
-    <table className="transaction-history">
-  <thead>
+    <TransactionHistory>
+  <TableHead>
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <TableCell>Type</TableCell>
+      <TableCell>Amount</TableCell>
+      <TableCell>Currency</TableCell>
     </tr>
-  </thead>
+  </TableHead>
 
     <tbody>
         {items.map(item => (
@@ -21,7 +22,7 @@ export const Transactions = ({ items }) => (
     />
       ))}
     </tbody>
-</table>
+</TransactionHistory>
 );
 
 Transactions.propTypes = {

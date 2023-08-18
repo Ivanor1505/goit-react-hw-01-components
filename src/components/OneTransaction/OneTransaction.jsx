@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { TableItem, TableCell } from './OneTransactin.styled'
 
 export const OneTransaction = ({ type, amount, currency }) => (
     
-   <tr className="item">
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+   <TableItem>
+      <TableCell>{type}</TableCell>
+      <TableCell>{amount}</TableCell>
+      <TableCell>{currency}</TableCell>
+    </TableItem>
      
 );
 
