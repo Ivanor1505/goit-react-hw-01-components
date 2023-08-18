@@ -1,21 +1,13 @@
 import styled from 'styled-components';
 
-// const getBcgColor = props => {
-//   switch (props.stat.label) {
-//     case '.docx':
-//       return "green";
-//     case '.pdf':
-//       return "orange";
-//     case '.mp3':
-//           return "red";
-//       case '.psd':
-//           return "red";
-//       case '.pdf':
-//       return "red";
-//     default:
-//       return null;
-//   }
-// };
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 export const StatisticsBoard = styled.section`
 display: block;
@@ -29,11 +21,14 @@ justify-content: center;
 `;
 
 export const StatListItem = styled.li`
-margin: 10px 20px;
+padding: 10px;
+height: 70px;
+width: 90px;
+font-size: 20px;
+font-weight: bold;
 display: flex;
 flex-direction: column;
 gap: 10px;
-:nth-child(even) {
-  background-color: #87d8f2;
-}
+background-color: ${getRandomColor};
+
 `;

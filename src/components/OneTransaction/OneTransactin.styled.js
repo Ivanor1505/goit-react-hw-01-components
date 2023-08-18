@@ -10,6 +10,7 @@ padding-bottom: 10px;
 `;
 
 export const TableCell = styled.td`
+font-size: 24px;
 width: 150px;
 text-align: center;
 `;

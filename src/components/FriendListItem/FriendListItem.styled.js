@@ -24,6 +24,7 @@ background-color: ${getColor};
 export const Name = styled.p`
 margin-left: 10px;
 font-size: 25px;
+font-weight: bold;
 `;
 
 export const Ava = styled.img`
